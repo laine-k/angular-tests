@@ -5,16 +5,27 @@ import { of } from 'rxjs/observable/of'; // you'll simulate getting data from th
 @Injectable()
 export class MockService {
 
-  iconColor = {iconGreen:true}
+  timeObj = {"currentTime":new Date()};
+  mockData = {
+    "name":"John",
+    "age":30,
+    "cars": {
+        "car1":"Ford",
+        "car2":"BMW",
+        "car3":"Fiat"
+    }
+ }
 
   constructor() { }
 
   getMockStatus(){
-    return this.iconColor;
+    
+    return this.mockData;
   }
 
   getMockStatusObs():Observable<Object>{
-    return of(this.iconColor);
+    let timeObj = {"currentTime":new Date()}
+    return of(timeObj);
   }
 
 }
