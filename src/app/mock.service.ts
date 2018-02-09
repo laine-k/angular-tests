@@ -18,8 +18,7 @@ export class MockService {
 
   constructor() { }
 
-  getMockStatus(){
-    
+  getMockStatus(){    
     return this.mockData;
   }
 
