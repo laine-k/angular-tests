@@ -1,0 +1,25 @@
+<p>
+  mock-service component
+</p>
+<ul>
+  <li>
+    <button (click)="getIconColor()">Call mock service without observable</button>
+    <pre>{{mockServiceWObs}}</pre>
+    <pre>{{mockData1}}</pre>
+    <div *ngFor="let p of testObj1?.cars">
+      <p>{{p}}<p>
+    </div>
+    <p>Name:{{testObj1?.name}}</p>
+    <p>Age:{{testObj1?.age}}</p>
+    <p>Car 2:{{testObj1?.cars.car2}}</p>
+  </li>
+  <li>
+    <button (click)="getIconColorAsObs()">Call mock service with observable</button>
+    <pre>{{mockServiceObs}}</pre>
+    <pre>{{mockData2}}</pre>
+    <p>Time now: {{time2}}</p>
+    
+  </li>
+ 
+</ul>
+
